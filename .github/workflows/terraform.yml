@@ -30,3 +30,4 @@ jobs:
         env:
           AWS_DEFAULT_REGION: us-east-1
           AWS-REGION: us-east-1
+          TFE_TOKEN: ${{ secrets.TF_API_TOKEN }}
