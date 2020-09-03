@@ -1,5 +1,10 @@
 name: 'Terraform Plan'
-on: [push, pull_request]
+on: 
+  pull_request:
+    branches:
+     - master
+     - develop
+
 defaults:
       run:
         shell: bash
