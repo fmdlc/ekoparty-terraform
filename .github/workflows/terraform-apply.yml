@@ -1,12 +1,17 @@
-name: 'Terraform Plan'
-on: [push, pull_request]
+name: 'Terraform Apply'
+on:
+  push:
+    branches:
+      - master
+
 defaults:
       run:
         shell: bash
         working-directory: ./terraform
 
 jobs:
-  terraform:
+  build:
+    if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true
     name: 'Terraform'
     runs-on: ubuntu-latest
 
@@ -21,20 +26,17 @@ jobs:
 
       - name: 'Terraform Init'
         run: terraform init
-
-      - name: 'Terraform Format'
-        run: terraform fmt -check
-
-      - name: Check linting of Terraform files
-        uses: devops-infra/action-tflint@master
-        with:
-          fail_on_changes: false
-          tflint_params: "--deep"
-
+      
       - name: 'Terraform Plan'
         run: terraform plan
         env:
           AWS_DEFAULT_REGION: us-east-1
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }} 
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_ID }}
-  
+
+      - name: 'Terraform Apply'
+        run: terraform apply -auto-approve
+        env:
+          AWS_DEFAULT_REGION: us-east-1
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }} 
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_ID }}
