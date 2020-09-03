@@ -1,8 +1,11 @@
+![https://media-exp1.licdn.com/dms/image/C4E1BAQF0-zKgjLFxiQ/company-background_10000/0?e=2159024400&v=beta&t=B1JsIFyearEmYZXtVxOjb-cKBSMB-jrdtmO7MKZH1Ls](https://media-exp1.licdn.com/dms/image/C4E1BAQF0-zKgjLFxiQ/company-background_10000/0?e=2159024400&v=beta&t=B1JsIFyearEmYZXtVxOjb-cKBSMB-jrdtmO7MKZH1Ls)
 # ekoparty-terraform
-![Terraform Execution](https://github.com/fmdlc/ekoparty-devsecops/workflows/Terraform%20Execution/badge.svg)![Terraform Execution](https://github.com/fmdlc/ekoparty-devsecops/workflows/Terraform%20Execution/badge.svg?event=pull_request)
+![Terraform Execution](https://github.com/fmdlc/ekoparty-devsecops/workflows/Terraform%20Execution/badge.svg)
+
 
 This set of [Terraform](https://www.terraform.io/) HCL files, pretends to be only examples for training purposes. It's a straightforward exercise
 to introduce people into the Terraform world.
+
 [![Linkedin](https://i.stack.imgur.com/gVE0j.png) LinkedIn](https://www.linkedin.com/in/fmdlc)[![GitHub](https://i.stack.imgur.com/tskMh.png) GitHub](https://github.com/fmdlc)
 ## Requirements
 
