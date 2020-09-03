@@ -3,6 +3,7 @@
 #************************************************
 variable environment {
   description = "Account environment"
+  default     = "ekoparty"
 }
 
 variable aws_region {
@@ -17,6 +18,7 @@ variable aws_region {
 
 variable "vpc_name" {
   description = "The main VPC name"
+  default     = "main"
 }
 
 variable "vpc_cidr" {
