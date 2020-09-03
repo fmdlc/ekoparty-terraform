@@ -3,6 +3,7 @@ on: [push, pull_request]
 defaults:
       run:
         shell: bash
+        working-directory: ./terraform
 
 jobs:
   terraform:
@@ -26,3 +27,6 @@ jobs:
 
       - name: 'Terraform Plan'
         run: terraform plan
+        env:
+          AWS_DEFAULT_REGION: us-east-1
+          AWS-REGION: us-east-1
