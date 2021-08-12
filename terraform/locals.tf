@@ -1,8 +1,8 @@
 locals {
   common_tags = {
-    Name                             = "ekoparty"
-    Environment                      = var.environment
-    "kubernetes.io/cluster/ekoparty" = "shared"
-    "kubernetes.io/role/elb"         = "1"
+    Name                                 = "demo-cluster"
+    Environment                          = var.environment
+    "kubernetes.io/cluster/demo-cluster" = "shared"
+    "kubernetes.io/role/elb"             = "1"
   }
 }

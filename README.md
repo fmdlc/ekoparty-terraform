@@ -1,6 +1,5 @@
-![https://media-exp1.licdn.com/dms/image/C4E1BAQF0-zKgjLFxiQ/company-background_10000/0?e=2159024400&v=beta&t=B1JsIFyearEmYZXtVxOjb-cKBSMB-jrdtmO7MKZH1Ls](https://media-exp1.licdn.com/dms/image/C4E1BAQF0-zKgjLFxiQ/company-background_10000/0?e=2159024400&v=beta&t=B1JsIFyearEmYZXtVxOjb-cKBSMB-jrdtmO7MKZH1Ls)
-# ekoparty-terraform
-![Terraform Execution](https://github.com/fmdlc/ekoparty-devsecops/workflows/Terraform%20Execution/badge.svg)
+# tf-demo-eks
+![Terraform Execution](https://github.com/fmdlc/tf-demo-eks/workflows/Terraform%20Execution/badge.svg)
 
 
 This set of [Terraform](https://www.terraform.io/) HCL files, pretends to be only examples for training purposes. It's a straightforward exercise
@@ -25,7 +24,7 @@ to introduce people into the Terraform world.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | aws\_region | Default AWS region | `string` | `"us-east-1"` | no |
-| environment | Account environment | `string` | `"ekoparty"` | no |
+| environment | Account environment | `string` | `"prod"` | no |
 | vpc\_cidr | The VPC CIDR to use | `string` | `"10.0.0.0/16"` | no |
 | vpc\_name | The main VPC name | `string` | `"main"` | no |
 | vpc\_public\_subnets | n/a | `map` | <pre>{<br>  "us-east-1a": "10.0.1.0/24",<br>  "us-east-1b": "10.0.2.0/24",<br>  "us-east-1c": "10.0.3.0/24"<br>}</pre> | no |

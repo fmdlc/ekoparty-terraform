@@ -3,7 +3,7 @@
 #************************************************
 variable "environment" {
   description = "Account environment"
-  default     = "ekoparty"
+  default     = "demo-cluster"
 }
 
 variable "aws_region" {
