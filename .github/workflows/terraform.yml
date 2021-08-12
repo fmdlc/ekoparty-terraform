@@ -34,7 +34,7 @@ jobs:
           fail_on_changes: false
           tflint_params: "--deep"
       - name: 'Terraform Plan'
-        run: terraform plan
+        run: terraform plan -out=saved.plan
         env:
           AWS_DEFAULT_REGION: us-east-1
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
