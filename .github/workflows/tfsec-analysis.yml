@@ -3,7 +3,7 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: tfsec
+name: TFSec analysis
 
 on:
   push:
@@ -11,7 +11,7 @@ on:
   pull_request:
     branches: [ master ]  
   schedule:
-    - cron: '29 0 * * 6'
+    - cron: '0 12 * * *'
 
 jobs:
   tfsec:
@@ -29,10 +29,11 @@ jobs:
       - name: Run tfsec
         uses: tfsec/tfsec-sarif-action@9a83b5c3524f825c020e356335855741fd02745f
         with:
-          sarif_file: tfsec.sarif         
+          sarif_file: tfsec.sarif
+          working_directory: ./terraform/
 
       - name: Upload SARIF file
         uses: github/codeql-action/upload-sarif@v1
         with:
           # Path to SARIF file relative to the root of the repository
-          sarif_file: tfsec.sarif  
+          sarif_file: ztfsec.sarif  
