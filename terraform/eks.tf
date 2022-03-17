@@ -6,6 +6,7 @@ provider "kubernetes" {
 
 module "eks-cluster" {
   source          = "terraform-aws-modules/eks/aws"
+  version         = "17.9.0"
   cluster_name    = "demo-cluster"
   cluster_version = "1.20"
   subnets         = [for subnet in module.vpc.public_subnets : subnet]
@@ -13,7 +14,7 @@ module "eks-cluster" {
 
   worker_groups = [
     {
-      instance_type = "t2.small"
+      instance_type = "t3.small"
       asg_max_size  = 3
     }
   ]
